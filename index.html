@@ -1,0 +1,51 @@
+<!doctype <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Todo Repeat</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid wrapper">
+        <div class="row">
+            <div class="col-xs-4">
+                <ul id="listName">
+                </ul>
+                <form id="newListForm">
+                    <input type="text" placeholder="Enter you'r list name here" id="newListNameInput" autocomplete="off">
+                    <button type="submit" id="list_button">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="col-xs-8">
+                <ul id="todosUlList">
+
+                </ul>
+                <form id="todoForm">
+                    <input type="text" placeholder="Enter you'r todo name here" id="todoInput" autocomplete="off">
+                    <button type="submit" id="todo_btn">Add Todo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
