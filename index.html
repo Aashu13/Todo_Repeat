@@ -13,17 +13,13 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12">
-                <h1>Todo Repeat</h1>
-            </div>
+    <div class="wrapper">
+        <div class="header">
+            <h4>Todo Repeat</header>
         </div>
-    </div>
-
-    <div class="container-fluid wrapper">
-        <div class="row">
-            <div class="col-xs-4">
+        <div class="container">
+            <div class="left-sidebar">
+                <h3>List Name</h3>
                 <ul id="listName">
                 </ul>
                 <form id="newListForm">
@@ -34,9 +30,9 @@
                 </form>
             </div>
 
-            <div class="col-xs-8">
+            <div class="right-sidebar">
+                <h3>Todo Name</h3>
                 <ul id="todosUlList">
-
                 </ul>
                 <form id="todoForm">
                     <input type="text" placeholder="Enter you'r todo name here" id="todoInput" autocomplete="off">

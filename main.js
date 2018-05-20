@@ -83,6 +83,7 @@ function getTodos(e) {
   var todoInput = document.getElementById("todoInput");
   clickedNameListIndex = data[nameListIndex];
   todos = clickedNameListIndex.todos;
+  console.log(todos);
   if (todoInput.value == "") {
     alert("please enter todo name");
     return false;
