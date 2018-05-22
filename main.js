@@ -39,7 +39,6 @@ function addNewList(e) {
   renderListName();
 }
 
-
 function addClassFunction(e) {
   nameListIndex = e.target.getAttribute("listName-index");
   if (e.target.nodeName == "LI") {
@@ -83,7 +82,6 @@ function getTodos(e) {
   var todoInput = document.getElementById("todoInput");
   clickedNameListIndex = data[nameListIndex];
   todos = clickedNameListIndex.todos;
-  console.log(todos);
   if (todoInput.value == "") {
     alert("please enter todo name");
     return false;
@@ -112,22 +110,25 @@ function checkSateFunction(e) {
 
 function removeTodoFunction(e) {
   var clickTodoList = e.target.parentNode.getAttribute("todos-index");
-  console.log(clickTodoList);
   if (e.target.nodeName == "I") {
     clickedNameListIndex = data[nameListIndex];
     todos = clickedNameListIndex.todos;
-    todosUlList.removeChild(todosUlList.childNodes[clickTodoList]);
     todos.splice(clickTodoList, 1);
+
+    todosUlList.removeChild(todosUlList.childNodes[clickTodoList]);
+    renderTodos(todos);
   }
 }
 
 function removeListName(e) {
-  var removeListNameIndex = e.target.parentNode.getAttribute('listName-index');
+  var removeListNameIndex = e.target.parentNode.getAttribute("listName-index");
   if (e.target.nodeName == "I") {
     clickedNameListIndex = data[nameListIndex];
     data.splice(removeListNameIndex, 1);
     listNameUl.removeChild(listNameUl.childNodes[removeListNameIndex]);
-    if (e.target.parentNode.classList.contains('active')) {
+    listNameUl.innerHTML = "";
+    renderListName();
+    if (e.target.parentNode.classList.contains("active")) {
       todosUlList.innerHTML = "";
       todoForm.style.display = "none";
     }
